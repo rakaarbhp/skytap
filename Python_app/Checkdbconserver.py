@@ -16,7 +16,8 @@ def signup_page():
 
 @app.route('/register',methods=["GET","POST"])
 def register_page():
-    conn = (host = "localhost",
+
+    conn = (host = "10.0.0.3",
             user = "root",
             passwd = "watha",
             db = "Skytap")
