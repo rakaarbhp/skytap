@@ -16,10 +16,11 @@ def signup_page():
 
 @app.route('/register',methods=["GET","POST"])
 def register_page():
-    conn = MySQLdb.connect(host="10.0.0.3",
-                           user = "root",
-                           passwd = "watha",
-                           db = "Skytap")
+    conn = connect(host="10.0.0.3",
+                   user = "root",
+                   passwd = "watha",
+                   db = "Skytap")
+
     print('connected')
     try:
         c = conn.cursor()
