@@ -21,6 +21,7 @@ def register_page():
                            user = "root",
                            passwd = "watha",
                            db = "Skytap")
+    print('connected')
     try:
         c = conn.cursor()
         return("okay")
