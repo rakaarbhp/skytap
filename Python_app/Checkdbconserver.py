@@ -26,7 +26,7 @@ def register_page():
                            user = "root",
                            passwd = "watha",
                            db = "Skytap",
-                           port = "1249")
+                           port = "3306")
     try:
         c = conn.cursor()
         return("okay")
