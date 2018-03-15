@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from flask_mysqldb import MySQL
+import MySQLdb
 
 app = Flask(__name__)
 
@@ -17,18 +17,10 @@ def signup_page():
 
 @app.route('/register',methods=["GET","POST"])
 def register_page():
-
-    app.config['MYSQL_HOST'] = '10.0.0.3'
-    app.config['MYSQL_USER'] = 'root'
-    app.config['MYSQL_PASSWORD'] = 'watha'
-    app.config['MYSQL_DB'] = 'Skytap'
-    mysql = MySQL(app)
-
-#    conn = (host = "10.0.0.3",
-#            user = "root",
-#            passwd = "watha",
-#            db = "Skytap")
-    print('connected')
+    conn = MySQLdb.connect(host="10.0.0.3",
+                           user = "root",
+                           passwd = "watha",
+                           db = "Skytap")
     try:
         c = conn.cursor()
         return("okay")
