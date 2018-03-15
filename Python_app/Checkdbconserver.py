@@ -1,6 +1,9 @@
 from flask import Flask, render_template, request
-import PyMySQL
+import MySQLdb  #Confirm you get an error
 
+import pymysql
+pymysql.install_as_MySQLdb()
+import MySQLdb
 #import MySQLdb
 
 app = Flask(__name__)
@@ -19,7 +22,7 @@ def signup_page():
 
 @app.route('/register',methods=["GET","POST"])
 def register_page():
-    conn = PyMySQL.connect(host="10.0.0.3",
+    conn = MySQLdb.connect(host="10.0.0.3",
                            user = "root",
                            passwd = "watha",
                            db = "Skytap")
