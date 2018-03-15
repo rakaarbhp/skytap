@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import MySQLdb  #Confirm you get an error
+# import MySQLdb  #Confirm you get an error
 
 import pymysql
 pymysql.install_as_MySQLdb()
