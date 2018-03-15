@@ -25,7 +25,8 @@ def register_page():
     conn = MySQLdb.connect(host="10.0.0.3",
                            user = "root",
                            passwd = "watha",
-                           db = "Skytap")
+                           db = "Skytap",
+                           port = "1249")
     try:
         c = conn.cursor()
         return("okay")
