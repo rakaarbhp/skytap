@@ -42,9 +42,9 @@ class Database:
     print ("succes")
 #    try:
 #        c = conn.cursor()
-        return("okay")
-    except Exception as e:
-        return(str(e))
+#        return("okay")
+#    except Exception as e:
+#        return(str(e))
 
 
 
