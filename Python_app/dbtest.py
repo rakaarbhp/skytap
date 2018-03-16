@@ -32,6 +32,7 @@ class Database:
     def __init__(self):
         self.connection = MySQLdb.connect(self.host, self.user, self.password, self.db)
         self.cursor = self.connection.cursor()
+        
 
 
 #def register_page():
@@ -41,7 +42,7 @@ class Database:
 #                           db = "Skytap",
 #                           port = "1249")
     print (success)
-    try:
+#    try:
 #        c = conn.cursor()
     return("okay")
     except Exception as e:
