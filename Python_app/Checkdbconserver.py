@@ -21,15 +21,27 @@ def signup_page():
 
 
 @app.route('/register')
-def register_page():
-    conn = MySQLdb.connect(host="10.0.0.2",
-                           user = "root",
-                           passwd = "watha",
-                           db = "Skytap",
-                           port = "3306")
+
+class Database:
+
+    host = '10.0.0.2'
+    user = 'root'
+    password = 'watha'
+    db = 'Skytap'
+
+    def __init__(self):
+        self.connection = MySQLdb.connect(self.host, self.user, self.password, self.db)
+        self.cursor = self.connection.cursor()
+
+#def register_page():
+#    conn = MySQLdb.connect(self, host="10.0.0.2",
+#                           user = "root",
+#                           passwd = "watha",
+#                           db = "Skytap",
+#                           port = "3306")
     print ("succes")
-    try:
-        c = conn.cursor()
+#    try:
+#        c = conn.cursor()
         return("okay")
     except Exception as e:
         return(str(e))
