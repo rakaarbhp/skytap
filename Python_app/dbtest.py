@@ -20,7 +20,7 @@ def signup_page():
         return render_template('signup.html')
 
 
-@app.route('/register',methods=["GET","POST"])
+@app.route('/register')
 
 class Database:
 
