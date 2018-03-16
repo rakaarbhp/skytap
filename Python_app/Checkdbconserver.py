@@ -25,8 +25,8 @@ def signup_page():
 class Database:
 
     host = '10.0.0.2'
-    user = 'root'
-    password = 'watha'
+    user = 'watha'
+    password = 'Watha12!'
     db = 'Skytap'
 
     def __init__(self):
