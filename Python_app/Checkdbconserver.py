@@ -20,7 +20,7 @@ def signup_page():
         return render_template('signup.html')
 
 
-@app.route('/register',methods=["GET","POST"])
+@app.route('/register')
 def register_page():
     conn = MySQLdb.connect(host="10.0.0.2",
                            user = "root",
