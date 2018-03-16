@@ -24,7 +24,7 @@ def signup_page():
 
 class Database:
 
-    host = '10.0.0.2'
+    host = '10.0.1.1'
     user = 'admin'
     password = 'Watha12!'
     db = 'Skytap'
@@ -44,7 +44,7 @@ class Database:
     print (success)
 #    try:
 #        c = conn.cursor()
-    return("okay")
+#    return("okay")
 #    except Exception as e:
 #    return(str(e))
 
